@@ -1,0 +1,149 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:2:1-44:12
+INJECTED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:2:1-44:12
+INJECTED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:2:1-44:12
+INJECTED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:2:1-44:12
+INJECTED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:2:1-44:12
+INJECTED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:2:1-44:12
+INJECTED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:2:1-44:12
+	package
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:3:7-33
+		INJECTED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml
+	android:versionName
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:5:7-32
+		INJECTED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:4:7-30
+		INJECTED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml
+uses-sdk
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:6:7-49
+INJECTED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:6:7-49
+INJECTED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:6:7-49
+INJECTED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:6:7-49
+INJECTED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:6:7-49
+	android:targetSdkVersion
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:6:17-46
+		INJECTED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:6:7-49
+		INJECTED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml
+application
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:9:5-13:19
+	android:name
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:9:19-48
+service#org.doubango.ngn.NgnNativeService
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:11:2-44
+	android:name
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:11:11-42
+uses-permission#android.permission.INTERNET
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:15:5-67
+	android:name
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:15:22-64
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:16:2-73
+	android:name
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:16:19-70
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:17:2-76
+	android:name
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:17:19-73
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:18:2-73
+	android:name
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:18:19-70
+uses-permission#android.permission.CHANGE_NETWORK_STATE
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:19:2-76
+	android:name
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:19:19-73
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:21:2-78
+	android:name
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:21:19-75
+uses-permission#android.permission.CAMERA
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:22:2-62
+	android:name
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:22:19-59
+uses-permission#android.permission.WAKE_LOCK
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:23:2-65
+	android:name
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:23:19-62
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:24:2-68
+	android:name
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:24:19-65
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:25:2-77
+	android:name
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:25:19-74
+uses-permission#android.permission.VIBRATE
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:26:2-63
+	android:name
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:26:19-60
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:27:2-78
+	android:name
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:27:19-75
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:29:5-73
+	android:name
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:29:22-70
+uses-permission#android.permission.DISABLE_KEYGUARD
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:30:2-72
+	android:name
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:30:19-69
+uses-permission#android.permission.READ_CONTACTS
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:31:2-68
+	android:name
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:31:19-66
+uses-permission#android.permission.WRITE_CONTACTS
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:32:2-69
+	android:name
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:32:19-67
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:33:2-72
+	android:name
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:33:19-69
+uses-permission#android.permission.PROCESS_OUTGOING_CALLS
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:34:2-78
+	android:name
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:34:19-75
+uses-permission#android.permission.CALL_PHONE
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:35:2-66
+	android:name
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:35:19-63
+uses-permission#android.permission.RAISED_THREAD_PRIORITY
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:36:5-80
+	android:name
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:36:22-78
+uses-permission#android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:38:2-117
+	android:required
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:38:90-114
+	android:name
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:38:19-89
+uses-feature#0x00020000
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:40:5-79
+	android:glEsVersion
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:40:19-51
+	android:required
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:40:53-77
+uses-feature#android.hardware.camera
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:41:2-82
+	android:required
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:41:56-80
+	android:name
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:41:16-54
+uses-feature#android.hardware.audio.low_latency
+ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:42:2-92
+	android:required
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:42:66-90
+	android:name
+		ADDED from D:\AndroidStudioProjects\imsdroid-master\NTGWork\STCDroid\android-ngn-stack\AndroidManifest.xml:42:16-65

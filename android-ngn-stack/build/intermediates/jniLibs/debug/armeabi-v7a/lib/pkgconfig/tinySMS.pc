@@ -1,0 +1,14 @@
+prefix = /Users/ahmedabobakr/AndroidStudioProjects/IMS/doubango-master/android-projects/output/commercial/armv7-a
+exec_prefix = ${prefix}
+libdir = ${exec_prefix}/lib
+includedir = ${prefix}/include
+
+Name : libtinySMS
+Description : Doubango Telecom tinySMS (3GPP SMS) library
+Version : 2.0.1316
+Requires: 
+Requires.private: tinySAK = 2.0.1316
+Conflicts:
+Cflags : -I${includedir}/tinysms
+Libs : -L${libdir} -ltinySMS
+Libs.private: 

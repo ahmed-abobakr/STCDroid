@@ -1,0 +1,15 @@
+prefix = /Users/ahmedabobakr/AndroidStudioProjects/IMS/doubango-master/android-projects/output/commercial/x86
+exec_prefix = ${prefix}
+libdir = ${exec_prefix}/lib
+includedir = ${prefix}/include
+
+Name : libtinyIPSec
+Description : Doubango Telecom tinyIPSec (IPSec) library
+Version : 2.0.1316
+Requires: 
+Requires.private: tinySAK = 2.0.1316
+Conflicts:
+Cflags : -I${includedir}/tinyipsec
+Libs : -L${libdir} -ltinyIPSec
+Libs.private: 
+
