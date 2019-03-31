@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CallActivity"
+    android:background="@color/colorPrimaryDark">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="70dp">
+
+    <EditText
+        android:id="@+id/activity_call_editText_dtmf"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:enabled="false"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp" />
+
+    <TableLayout
+        android:id="@+id/activity_call_table_nums"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_call_editText_dtmf"
+        android:layout_centerHorizontal="true">
+
+    <TableRow>
+
+        <ImageView
+            android:id="@+id/activity_call_imageview_num1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_one" />
+
+        <ImageView
+            android:id="@+id/activity_call_imageview_num2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_two" />
+
+        <ImageView
+            android:id="@+id/activity_call_imageview_num3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_three" />
+    </TableRow>
+
+    <TableRow>
+
+        <ImageView
+            android:id="@+id/activity_call_imageview_num4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_four" />
+
+        <ImageView
+            android:id="@+id/activity_call_imageview_num5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_five" />
+
+        <ImageView
+            android:id="@+id/activity_call_imageview_num6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_six" />
+    </TableRow>
+
+    <TableRow>
+
+        <ImageView
+            android:id="@+id/activity_call_imageview_num7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_seven" />
+
+        <ImageView
+            android:id="@+id/activity_call_imageview_num8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_eight" />
+
+        <ImageView
+            android:id="@+id/activity_call_imageview_num9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_nine" />
+    </TableRow>
+
+    <TableRow>
+
+        <ImageView
+            android:id="@+id/activity_call_imageview_numStar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+             />
+
+        <ImageView
+            android:id="@+id/activity_call_imageview_num0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_zero" />
+
+        <ImageView
+            android:id="@+id/activity_call_imageview_numHachtag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+             />
+    </TableRow>
+        <TableRow>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp" />
+
+            <ImageView
+                android:id="@+id/activity_call_imageview_hangkeypad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/ic_call" />
+
+
+        </TableRow>
+    </TableLayout>
+    </RelativeLayout>
+</ScrollView>
+

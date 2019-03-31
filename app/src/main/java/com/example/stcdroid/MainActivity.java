@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText editImpu, editImpi, editName, editPassword, editRealm, editHost;
     TextView txtStatus;
-    Button btnRegister;
+    Button btnRegister, btnCall;
 
     private BroadcastReceiver mSipBroadCastRecv;
 
@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         editRealm = findViewById(R.id.edit_realm);
         editHost = findViewById(R.id.edit_host);
         btnRegister = findViewById(R.id.btn_register);
+        btnCall = findViewById(R.id.btn_call);
 
         mEngine = NgnEngine.getInstance();
         mSipService = mEngine.getSipService();
@@ -173,6 +174,13 @@ public class MainActivity extends AppCompatActivity {
         final IntentFilter intentF = new IntentFilter();
         intentF.addAction(NgnRegistrationEventArgs.ACTION_REGISTRATION_EVENT);
         registerReceiver(mSipBroadCastRecv, intentF);
+
+        btnCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, CallActivity.class));
+            }
+        });
     }
 
 
