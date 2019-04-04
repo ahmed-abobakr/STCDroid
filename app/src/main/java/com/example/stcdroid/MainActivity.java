@@ -181,16 +181,18 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, CallActivity.class));
             }
         });
-    }
 
-
-    public void initializeManager() {
         if(!mEngine.isStarted()){
             if(!mEngine.start()){
                 Log.e("DEBUG", "Failed to start the engine :(");
                 return;
             }
         }
+    }
+
+
+    public void initializeManager() {
+
 
         // Register
 
