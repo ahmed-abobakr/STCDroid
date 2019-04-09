@@ -43,6 +43,10 @@ public class CallStateReceiver extends BroadcastReceiver {
                     // Ring
 
                     mEngine.getSoundService().startRingTone();
+                    CallActivity.setAvSession(avSession);
+                    Intent i = new Intent(context, CallActivity.class);
+                    i.putExtra("incoming", true);
+                    context.startActivity(i);
                     break;
                 case INCALL:
                     Log.i("DEBUG", "Call connected");

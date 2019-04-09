@@ -7,6 +7,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.doubango.ngn.NgnEngine;
@@ -19,11 +22,16 @@ import org.doubango.ngn.utils.NgnUriUtils;
 public class CallActivity extends AppCompatActivity {
 
     EditText editCall;
-    ImageView imgOne, imgTwo, imgThree, imgFour, imgFive, imgSix, imgSeven, imgEight, imgNine, imgZero, imgCall;
+    ImageView imgOne, imgTwo, imgThree, imgFour, imgFive, imgSix, imgSeven, imgEight, imgNine, imgZero, imgCall,
+                imgHangUp, imgAcceptCall, imgCancelCall;
+    TextView txtCalling, txtIncoming;
+    ScrollView scrollMakeCall;
+    RelativeLayout relativeCalling, relativeIncoming;
 
 
     NgnEngine mEngine;
     CallStateReceiver callStateReceiver;
+    static NgnAVSession avSession;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +50,14 @@ public class CallActivity extends AppCompatActivity {
         imgNine = findViewById(R.id.activity_call_imageview_num9);
         imgZero = findViewById(R.id.activity_call_imageview_num0);
         imgCall = findViewById(R.id.activity_call_imageview_hangkeypad);
+        imgHangUp = findViewById(R.id.ic_hangup);
+        imgAcceptCall = findViewById(R.id.img_accept);
+        imgCancelCall = findViewById(R.id.img_cancel);
+        txtCalling = findViewById(R.id.txtCalling);
+        txtIncoming = findViewById(R.id.text_incoming);
+        scrollMakeCall = findViewById(R.id.relative_make_call);
+        relativeCalling = findViewById(R.id.relative_calling);
+        relativeIncoming = findViewById(R.id.relative_incoming);
 
 
         imgOne.setOnClickListener(new View.OnClickListener() {
@@ -106,26 +122,79 @@ public class CallActivity extends AppCompatActivity {
             }
         });
 
+        if(getIntent().getBooleanExtra("incoming", false)){
+            showIncomingCall(avSession.getRemotePartyDisplayName());
+        }
 
         imgCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(getIntent().getBooleanExtra("incoming", false)) {
-
-                }else {
                     mEngine = NgnEngine.getInstance();
                     final INgnSipService sipService = mEngine.getSipService();
                     final String validUri = NgnUriUtils.makeValidSipUri(editCall.getText().toString());
-                    NgnAVSession avSession = NgnAVSession.createOutgoingSession(sipService.getSipStack(), NgnMediaType.Audio);
+                    avSession = NgnAVSession.createOutgoingSession(sipService.getSipStack(), NgnMediaType.Audio);
                     if (avSession.makeCall(validUri)) {
                         Log.d("TEST", "all is ok");
                         Toast.makeText(CallActivity.this, "all is ok", Toast.LENGTH_SHORT).show();
+                        showCallingUI(editCall.getText().toString());
                     } else {
                         Log.e("TEST", "Failed to place the call");
                         Toast.makeText(CallActivity.this, "Failed to place the call", Toast.LENGTH_LONG).show();
                     }
+
+            }
+        });
+    }
+
+
+    private void showCallingUI(String call){
+        scrollMakeCall.setVisibility(View.GONE);
+        relativeCalling.setVisibility(View.VISIBLE);
+        relativeIncoming.setVisibility(View.GONE);
+
+        txtCalling.setText(call);
+        imgHangUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(avSession != null){
+                    avSession.hangUpCall();
+                    avSession = null;
+                    finish();
                 }
             }
         });
+    }
+
+
+    private void showIncomingCall(final String call){
+        scrollMakeCall.setVisibility(View.GONE);
+        relativeCalling.setVisibility(View.GONE);
+        relativeIncoming.setVisibility(View.VISIBLE);
+
+        txtIncoming.setText(call);
+        imgAcceptCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(avSession != null){
+                    avSession.acceptCall();
+                    showCallingUI(call);
+                }
+            }
+        });
+
+        imgCancelCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(avSession  != null){
+                    avSession.hangUpCall();
+                    avSession = null;
+                    finish();
+                }
+            }
+        });
+    }
+
+    public static void setAvSession(NgnAVSession ngnAVSession){
+        avSession = ngnAVSession;
     }
 }
