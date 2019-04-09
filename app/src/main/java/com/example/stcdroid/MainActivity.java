@@ -76,6 +76,10 @@ public class MainActivity extends AppCompatActivity {
         INgnConfigurationService mConfigurationService
                 = mEngine.getConfigurationService();
 
+        mConfigurationService.putString(NgnConfigurationEntry.NETWORK_REALM,
+                "ims.stc.com.sa");
+        mConfigurationService.putString(NgnConfigurationEntry.NETWORK_PCSCF_HOST,
+                "10.247.69.97");
 
 
         String display_name = mConfigurationService.getString(NgnConfigurationEntry.IDENTITY_DISPLAY_NAME,
@@ -97,6 +101,8 @@ public class MainActivity extends AppCompatActivity {
         editPassword.setText(password);
         editRealm.setText(realm);
         editHost.setText(host);
+
+
 
 
         mConfigurationService.putString(NgnConfigurationEntry.IDENTITY_IMPI,
