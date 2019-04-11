@@ -133,9 +133,10 @@ public class CallActivity extends AppCompatActivity {
                     final INgnSipService sipService = mEngine.getSipService();
                     final String validUri = NgnUriUtils.makeValidSipUri(editCall.getText().toString());
                     avSession = NgnAVSession.createOutgoingSession(sipService.getSipStack(), NgnMediaType.Audio);
+                    avSession.setContext(CallActivity.this);
                     if (avSession.makeCall(validUri)) {
                         Log.d("TEST", "all is ok");
-                        Toast.makeText(CallActivity.this, "all is ok", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(CallActivity.this, "all is ok : " + validUri, Toast.LENGTH_SHORT).show();
                         showCallingUI(editCall.getText().toString());
                     } else {
                         Log.e("TEST", "Failed to place the call");
@@ -176,8 +177,11 @@ public class CallActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(avSession != null){
-                    avSession.acceptCall();
-                    showCallingUI(call);
+                    if(avSession.acceptCall()) {
+                        showCallingUI(call);
+                    }else {
+                        Toast.makeText(CallActivity.this, "we couldn't accept call", Toast.LENGTH_LONG).show();
+                    }
                 }
             }
         });
@@ -186,9 +190,12 @@ public class CallActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(avSession  != null){
-                    avSession.hangUpCall();
-                    avSession = null;
-                    finish();
+                    if(avSession.hangUpCall()) {
+                        avSession = null;
+                        finish();
+                    }else {
+                        Toast.makeText(CallActivity.this, "we couldn't cancel call", Toast.LENGTH_LONG).show();
+                    }
                 }
             }
         });

@@ -72,9 +72,9 @@ public class NgnSipStack extends SipStack{
         super.addHeader("Allow", "INVITE, ACK, CANCEL, BYE, MESSAGE, OPTIONS, NOTIFY, PRACK, UPDATE, REFER");
         super.addHeader("Privacy", "none");
         super.addHeader("P-Access-Network-Info", "3GPP-UTRAN-FDD;utran-cell-id-3gpp=60203797300908AE");
-        super.addHeader("User-Agent", String.format("(NTGClarity IMS Client Version: %s)",
+        /*super.addHeader("User-Agent", String.format("(NTGClarity IMS Client Version: %s)",
 				NgnApplication.getContext().getString(R.string.doubango_revision),
-				Build.MODEL));
+				Build.MODEL));*/
 	}
 
 	@Override

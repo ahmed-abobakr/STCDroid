@@ -160,7 +160,7 @@ public class NgnAVSession extends NgnInviteSession{
 	    super.addHeader("P-Preferred-Service", "urn:urn-7:3gpp-service.ims.icsi.mmtel");
 		super.addHeader("P-Early-Media", "supported");
 		super.addHeader("Accept", "application/sdp");
-		super.addHeader("Session-Expires","3600;refresher=uac");
+		/*super.addHeader("Session-Expires","3600;refresher=uac");*/
 
 	    mHistoryEvent = new NgnHistoryAVCallEvent((mediaType == NgnMediaType.AudioVideo || mediaType == NgnMediaType.Video), null);
 	    this.setState(callState);

@@ -75,7 +75,7 @@ public class NgnConfigurationEntry {
 //	public static final int DEFAULT_NETWORK_PCSCF_PORT = 5070;
 
 //	public static final String DEFAULT_NETWORK_REALM = "ims.mnc003.mcc602.3gppnetwork.org";
-	public static final String DEFAULT_NETWORK_REALM = "192.168.3.64";
+	public static final String DEFAULT_NETWORK_REALM = "ims.stc.com.sa";
 
 	public static final int DEFAULT_NETWORK_REGISTRATION_TIMEOUT = 3600;
 

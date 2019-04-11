@@ -22,12 +22,13 @@
     <EditText
         android:id="@+id/activity_call_editText_dtmf"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
         android:gravity="center_horizontal"
         android:enabled="false"
+        android:layout_marginTop="10dp"
         android:textColor="#FFFFFF"
         android:textSize="22sp" />
 
