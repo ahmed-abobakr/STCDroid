@@ -50,7 +50,7 @@ public class NgnConfigurationEntry {
 	public static final boolean DEFAULT_GENERAL_SEND_DEVICE_INFO = false;
 
 	//	Identity
-	public static final String DEFAULT_IDENTITY_DISPLAY_NAME = "Fathi";
+	public static final String DEFAULT_IDENTITY_DISPLAY_NAME = "+966114433260";
 	//Mousa Credential
 //	public static final String DEFAULT_IDENTITY_IMPU = "sip:+201118000887@ims.mnc003.mcc602.3gppnetwork.org";
 //	public static final String DEFAULT_IDENTITY_IMPI = "602030954768208@ims.mnc003.mcc602.3gppnetwork.org";
@@ -62,14 +62,14 @@ public class NgnConfigurationEntry {
 //	public static final String DEFAULT_IDENTITY_PASSWORD = "123456";
 
 	//NTG Sip Server
-	public static final String DEFAULT_IDENTITY_IMPU = "sip:203@192.168.3.64";
-	public static final String DEFAULT_IDENTITY_IMPI = "203";
-	public static final String DEFAULT_IDENTITY_PASSWORD = "abc203";
+	public static final String DEFAULT_IDENTITY_IMPU = "+966114433260@ims.stc.com.sa";
+	public static final String DEFAULT_IDENTITY_IMPI = "+966114433260";
+	public static final String DEFAULT_IDENTITY_PASSWORD = "1234";
 
 
 	// Network
 //	public static final String DEFAULT_NETWORK_PCSCF_HOST = "10.67.181.132";
-	public static final String DEFAULT_NETWORK_PCSCF_HOST = "192.168.3.64";
+	public static final String DEFAULT_NETWORK_PCSCF_HOST = "10.247.69.97";
 
 	public static final int DEFAULT_NETWORK_PCSCF_PORT = 5060;
 //	public static final int DEFAULT_NETWORK_PCSCF_PORT = 5070;
