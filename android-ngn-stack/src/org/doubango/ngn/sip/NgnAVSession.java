@@ -841,6 +841,14 @@ public class NgnAVSession extends NgnInviteSession{
     	return false;
     }
 
+    public boolean rejectCall(){
+        return mSession.reject();
+    }
+
+    public boolean closeCall(){
+        return mSession.hangup();
+    }
+
     /**
      * Puts the call on hold. At any time you can check if the call is held or not by using @ref isLocalHeld()
      * @return true if succeed and false otherwise

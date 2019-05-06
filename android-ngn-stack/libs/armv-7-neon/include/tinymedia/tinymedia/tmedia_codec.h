@@ -78,7 +78,7 @@ Must starts at 96 to be conform to RFC 5761 (rtcp-mux)
 #define TMEDIA_CODEC_FORMAT_SPEEX_WB					"98"
 #define TMEDIA_CODEC_FORMAT_SPEEX_UWB					"99"
 #define TMEDIA_CODEC_FORMAT_VP8							"100" /* Must to ease neg. with chrome and Asterisk */
-#define TMEDIA_CODEC_FORMAT_DTMF						"101"
+//#define TMEDIA_CODEC_FORMAT_DTMF						"101"
 
 #define TMEDIA_CODEC_FORMAT_H263_2000					"102"
 #define TMEDIA_CODEC_FORMAT_H263_1998					"103"
@@ -176,16 +176,16 @@ tmedia_codec_id_t;
 #define TMEDIA_CODEC_RATE_DECODING(self)			(TMEDIA_CODEC((self))->in.rate)
 #define TMEDIA_CODEC_RATE_ENCODING(self)			(TMEDIA_CODEC((self))->out.rate)
 
-#define TMEDIA_CODEC_PTIME_AUDIO_DECODING(self)			(TMEDIA_CODEC_AUDIO((self))->in.ptime)
-#define TMEDIA_CODEC_PTIME_AUDIO_ENCODING(self)			(TMEDIA_CODEC_AUDIO((self))->out.ptime)
+//#define TMEDIA_CODEC_PTIME_AUDIO_DECODING(self)			(TMEDIA_CODEC_AUDIO((self))->in.ptime)
+//#define TMEDIA_CODEC_PTIME_AUDIO_ENCODING(self)			(TMEDIA_CODEC_AUDIO((self))->out.ptime)
 
 #define TMEDIA_CODEC_CHANNELS_AUDIO_DECODING(self)			(TMEDIA_CODEC_AUDIO((self))->in.channels)
 #define TMEDIA_CODEC_CHANNELS_AUDIO_ENCODING(self)			(TMEDIA_CODEC_AUDIO((self))->out.channels)
 
-#define TMEDIA_CODEC_PCM_FRAME_SIZE_AUDIO_DECODING(self) ((TMEDIA_CODEC_PTIME_AUDIO_DECODING((self)) * TMEDIA_CODEC_RATE_DECODING((self)))/1000)
-#define TMEDIA_CODEC_PCM_FRAME_SIZE_AUDIO_ENCODING(self) ((TMEDIA_CODEC_PTIME_AUDIO_ENCODING((self)) * TMEDIA_CODEC_RATE_ENCODING((self)))/1000)
+//#define TMEDIA_CODEC_PCM_FRAME_SIZE_AUDIO_DECODING(self) ((TMEDIA_CODEC_PTIME_AUDIO_DECODING((self)) * TMEDIA_CODEC_RATE_DECODING((self)))/1000)
+//#define TMEDIA_CODEC_PCM_FRAME_SIZE_AUDIO_ENCODING(self) ((TMEDIA_CODEC_PTIME_AUDIO_ENCODING((self)) * TMEDIA_CODEC_RATE_ENCODING((self)))/1000)
 
-#define TMEDIA_CODEC_FRAME_DURATION_AUDIO_ENCODING(self) (int32_t)((float)TMEDIA_CODEC_PCM_FRAME_SIZE_AUDIO_ENCODING(self) * (float)TMEDIA_CODEC_AUDIO((self))->out.timestamp_multiplier)
+//#define TMEDIA_CODEC_FRAME_DURATION_AUDIO_ENCODING(self) (int32_t)((float)TMEDIA_CODEC_PCM_FRAME_SIZE_AUDIO_ENCODING(self) * (float)TMEDIA_CODEC_AUDIO((self))->out.timestamp_multiplier)
 
 /** callbacks for video codecs */
 typedef int (*tmedia_codec_video_enc_cb_f)(const tmedia_video_encode_result_xt* result);

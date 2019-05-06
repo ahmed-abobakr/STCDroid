@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnRegister, btnCall;
 
     private BroadcastReceiver mSipBroadCastRecv;
+    INgnConfigurationService mConfigurationService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,13 +74,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         NgnEngine mEngine = NgnEngine.getInstance();
-        INgnConfigurationService mConfigurationService
-                = mEngine.getConfigurationService();
+
+        mConfigurationService  = mEngine.getConfigurationService();
 
         mConfigurationService.putString(NgnConfigurationEntry.NETWORK_REALM,
                 "ims.stc.com.sa");
         mConfigurationService.putString(NgnConfigurationEntry.NETWORK_PCSCF_HOST,
-                "10.247.69.97");
+                "10.247.64.1");
 
 
         String display_name = mConfigurationService.getString(NgnConfigurationEntry.IDENTITY_DISPLAY_NAME,
@@ -105,34 +106,35 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        mConfigurationService.putString(NgnConfigurationEntry.IDENTITY_IMPI,
-                editImpi.getText().toString());
-        mConfigurationService.putString(NgnConfigurationEntry.IDENTITY_IMPU,
-                editImpu.getText().toString());
-        mConfigurationService.putString(NgnConfigurationEntry.IDENTITY_PASSWORD,
-                editPassword.getText().toString());
-        mConfigurationService.putString(NgnConfigurationEntry.NETWORK_PCSCF_HOST,
-                editHost.getText().toString());
-        /*mConfigurationService.putInt(NgnConfigurationEntry.NETWORK_PCSCF_PORT,
-                "sip_server_port");*/
-        mConfigurationService.putString(NgnConfigurationEntry.NETWORK_REALM,
-                editRealm.getText().toString());
-        mConfigurationService.putString(NgnConfigurationEntry.IDENTITY_DISPLAY_NAME,
-                editName.getText().toString());
-// By default, using 3G for calls disabled
 
-        mConfigurationService.putBoolean(NgnConfigurationEntry.NETWORK_USE_3G,
-                true);
-// You may want to leave the registration timeout to the default 1700 seconds
-
-        mConfigurationService.putInt(NgnConfigurationEntry.NETWORK_REGISTRATION_TIMEOUT,
-                3600);
-        mConfigurationService.commit();
 
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mConfigurationService.putString(NgnConfigurationEntry.IDENTITY_IMPI,
+                        editImpi.getText().toString());
+                mConfigurationService.putString(NgnConfigurationEntry.IDENTITY_IMPU,
+                        editImpu.getText().toString());
+                mConfigurationService.putString(NgnConfigurationEntry.IDENTITY_PASSWORD,
+                        editPassword.getText().toString());
+                mConfigurationService.putString(NgnConfigurationEntry.NETWORK_PCSCF_HOST,
+                        editHost.getText().toString());
+        /*mConfigurationService.putInt(NgnConfigurationEntry.NETWORK_PCSCF_PORT,
+                "sip_server_port");*/
+                mConfigurationService.putString(NgnConfigurationEntry.NETWORK_REALM,
+                        editRealm.getText().toString());
+                mConfigurationService.putString(NgnConfigurationEntry.IDENTITY_DISPLAY_NAME,
+                        editName.getText().toString());
+// By default, using 3G for calls disabled
+
+                mConfigurationService.putBoolean(NgnConfigurationEntry.NETWORK_USE_3G,
+                        true);
+// You may want to leave the registration timeout to the default 1700 seconds
+
+                mConfigurationService.putInt(NgnConfigurationEntry.NETWORK_REGISTRATION_TIMEOUT,
+                        3600);
+                mConfigurationService.commit();
                 initializeManager();
             }
         });

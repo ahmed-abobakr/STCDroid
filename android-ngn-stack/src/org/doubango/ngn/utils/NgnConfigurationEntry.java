@@ -69,7 +69,7 @@ public class NgnConfigurationEntry {
 
 	// Network
 //	public static final String DEFAULT_NETWORK_PCSCF_HOST = "10.67.181.132";
-	public static final String DEFAULT_NETWORK_PCSCF_HOST = "10.247.69.97";
+	public static final String DEFAULT_NETWORK_PCSCF_HOST = "10.247.64.1";
 
 	public static final int DEFAULT_NETWORK_PCSCF_PORT = 5060;
 //	public static final int DEFAULT_NETWORK_PCSCF_PORT = 5070;
@@ -98,7 +98,7 @@ public class NgnConfigurationEntry {
 	public static final boolean DEFAULT_NATT_USE_STUN_FOR_ICE = true;
 	public static final boolean DEFAULT_NATT_USE_TURN_FOR_ICE = false;
 	public static final boolean DEFAULT_NATT_STUN_DISCO = false;
-	public static final String DEFAULT_NATT_STUN_SERVER = "numb.viagenie.ca";
+	public static final String DEFAULT_NATT_STUN_SERVER = "10.247.64.1";
 	public static final int DEFAULT_NATT_STUN_PORT = 3478;
 	public static final String DEFAULT_NATT_STUN_USERNAME = "";
 	public static final String DEFAULT_NATT_STUN_PASSWORD = "";
@@ -117,13 +117,13 @@ public class NgnConfigurationEntry {
 	// Media
     public static final String DEFAULT_MEDIA_PROFILE = tmedia_profile_t.tmedia_profile_default.toString();
 	public static final int DEFAULT_MEDIA_CODECS =
-		tdav_codec_id_t.tdav_codec_id_h264_bp.swigValue() |
+		/*tdav_codec_id_t.tdav_codec_id_h264_bp.swigValue() |
 		tdav_codec_id_t.tdav_codec_id_vp8.swigValue() |
 		tdav_codec_id_t.tdav_codec_id_h263p.swigValue() |
 		tdav_codec_id_t.tdav_codec_id_h263.swigValue() |
-		tdav_codec_id_t.tdav_codec_id_g722.swigValue() |
-		tdav_codec_id_t.tdav_codec_id_pcmu.swigValue() |
-		tdav_codec_id_t.tdav_codec_id_pcma.swigValue() ;
+		tdav_codec_id_t.tdav_codec_id_g722.swigValue() |*/
+		tdav_codec_id_t.tdav_codec_id_pcmu.swigValue();
+	//tdav_codec_id_t.tdav_codec_id_pcma.swigValue() ;
 	public static final int DEFAULT_MEDIA_AUDIO_RESAMPLER_QUALITY = 0;
 	public static final int DEFAULT_MEDIA_AUDIO_CONSUMER_GAIN = 0; // disabled
 	public static final int DEFAULT_MEDIA_AUDIO_PRODUCER_GAIN = 0; // disabled

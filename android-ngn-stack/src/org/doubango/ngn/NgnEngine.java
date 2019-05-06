@@ -187,25 +187,25 @@ public class NgnEngine {
 		SipStack.initialize();
 		// Set codec priorities
 		int prio = 0;
-		SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_g722, prio++);
-		SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_speex_wb, prio++);
+		//SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_g722, prio++);
+		/*SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_speex_wb, prio++);
 		SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_speex_uwb, prio++);
-		SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_speex_nb, prio++);
-		SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_pcma, prio++);
+		SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_speex_nb, prio++);*/
+		//SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_pcma, prio++);
 		SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_pcmu, prio++);
-		SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_ilbc, prio++);
+		/*SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_ilbc, prio++);
         SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_gsm, prio++);
         SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_g729ab, prio++);
         SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_amr_nb_oa, prio++);
-        SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_amr_nb_be, prio++);
+        SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_amr_nb_be, prio++);*/
         
-        SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_h264_bp, prio++);
+        /*SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_h264_bp, prio++);
         SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_h264_mp, prio++);
         SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_vp8, prio++);
         SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_mp4ves_es, prio++);
         SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_theora, prio++);
         SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_h263, prio++);
-        SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_h261, prio++);
+        SipStack.setCodecPriority(tdav_codec_id_t.tdav_codec_id_h261, prio++);*/
         
         // Profile
         MediaSessionMgr.defaultsSetProfile(tmedia_profile_t.valueOf(configurationService.getString(
@@ -271,7 +271,7 @@ public class NgnEngine {
 		// This only happen when the audio engine is dynamically loaded from shared library (at least on Galaxy Nexus)
 		MediaSessionMgr.defaultsSetJbMaxLateRate(1);
 		MediaSessionMgr.defaultsSetRtcpEnabled(true);
-		MediaSessionMgr.defaultsSetRtcpMuxEnabled(true);
+		MediaSessionMgr.defaultsSetRtcpMuxEnabled(false);
 		// supported opus mw_rates: 8000,12000,16000,24000,48000
 		// opensl-es playback_rates: 8000, 11025, 16000, 22050, 24000, 32000, 44100, 64000, 88200, 96000, 192000
 		// webrtc aec record_rates: 8000, 16000, 32000

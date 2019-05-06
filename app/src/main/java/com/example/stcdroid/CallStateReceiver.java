@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
+import android.widget.Toast;
 
 import org.doubango.ngn.NgnEngine;
 import org.doubango.ngn.events.NgnEventArgs;
@@ -41,12 +42,14 @@ public class CallStateReceiver extends BroadcastReceiver {
                 case INCOMING:
                     Log.i("DEBUG", "Incoming call");
                     // Ring
-
-                    mEngine.getSoundService().startRingTone();
-                    CallActivity.setAvSession(avSession);
-                    Intent i = new Intent(context, CallActivity.class);
-                    i.putExtra("incoming", true);
-                    context.startActivity(i);
+                    if(avSession != null) {
+                        Toast.makeText(context, "Broadcast incoming call", Toast.LENGTH_LONG).show();
+                        mEngine.getSoundService().startRingTone();
+                        CallActivity.setAvSession(avSession);
+                        Intent i = new Intent(context, CallActivity.class);
+                        i.putExtra("incoming", true);
+                        context.startActivity(i);
+                    }
                     break;
                 case INCALL:
                     Log.i("DEBUG", "Call connected");

@@ -73,7 +73,7 @@ public class NgnSipStack extends SipStack{
         super.addHeader("Privacy", "none");
         super.addHeader("P-Access-Network-Info", "3GPP-UTRAN-FDD;utran-cell-id-3gpp=60203797300908AE");
         super.addHeader("User-Agent", String.format("(Ahmed Abobakr IMS Client Version: %s)",
-				NgnApplication.getContext().getString(R.string.doubango_revision),
+				"0.2 remmove DTMF form C layer",
 				Build.MODEL));
 	}
 
