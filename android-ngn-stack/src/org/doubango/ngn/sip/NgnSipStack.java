@@ -70,11 +70,13 @@ public class NgnSipStack extends SipStack{
 		
 	     // Sip headers
         super.addHeader("Allow", "INVITE, ACK, CANCEL, BYE, MESSAGE, OPTIONS, NOTIFY, PRACK, UPDATE, REFER");
-        super.addHeader("Privacy", "none");
-        super.addHeader("P-Access-Network-Info", "3GPP-UTRAN-FDD;utran-cell-id-3gpp=60203797300908AE");
+        //super.addHeader("Privacy", "none");
+        //super.addHeader("P-Access-Network-Info", "3GPP-UTRAN-FDD;utran-cell-id-3gpp=60203797300908AE");
         super.addHeader("User-Agent", String.format("(Ahmed Abobakr IMS Client Version: %s)",
-				"0.2 remmove DTMF form C layer",
+				"12 clean sdp",
 				Build.MODEL));
+		super.addHeader("Expires", "900");
+		super.removeHeader("P-Preferred-Identity");
 	}
 
 	@Override

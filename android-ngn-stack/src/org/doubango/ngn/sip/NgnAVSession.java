@@ -156,11 +156,13 @@ public class NgnAVSession extends NgnInviteSession{
 	        * P-Preferred-Service: urn:urn-7:3gpp-service.ims.icsi.mmtel
 	        */
 	    super.addCaps("+g.3gpp.icsi-ref", "\"urn%3Aurn-7%3A3gpp-service.ims.icsi.mmtel\"");
-	    super.addHeader("Accept-Contact", "*;+g.3gpp.icsi-ref=\"urn%3Aurn-7%3A3gpp-service.ims.icsi.mmtel\"");
-	    super.addHeader("P-Preferred-Service", "urn:urn-7:3gpp-service.ims.icsi.mmtel");
-		super.addHeader("P-Early-Media", "supported");
+	   // super.addHeader("Accept-Contact", "*;+g.3gpp.icsi-ref=\"urn%3Aurn-7%3A3gpp-service.ims.icsi.mmtel\"");
+	    //super.addHeader("P-Preferred-Service", "urn:urn-7:3gpp-service.ims.icsi.mmtel");
+		//super.addHeader("P-Early-Media", "supported");
 		super.addHeader("Accept", "application/sdp");
-		/*super.addHeader("Session-Expires","3600;refresher=uac");*/
+		//super.addHeader("Session-Expires","1800;refresher=uac");
+		super.addHeader("Session-Expires","1800");
+        super.removeHeader("P-Preferred-Identity");
 
 	    mHistoryEvent = new NgnHistoryAVCallEvent((mediaType == NgnMediaType.AudioVideo || mediaType == NgnMediaType.Video), null);
 	    this.setState(callState);
@@ -207,6 +209,12 @@ public class NgnAVSession extends NgnInviteSession{
         synchronized (sSessions){
             final NgnAVSession avSession = new NgnAVSession(sipStack, null, mediaType, InviteState.INPROGRESS);
 			Log.i(TAG, "Session " + avSession.getId());
+            /*avSession.removeHeader("minptime");
+            avSession.removeHeader("maxptime");
+            avSession.removeHeader("rtcp-mux");
+            avSession.getStack().removeHeader("minptime");
+            avSession.getStack().removeHeader("maxptime");
+            avSession.getStack().removeHeader("rtcp-mux");*/
             sSessions.put(avSession.getId(), avSession);
             return avSession;
         }

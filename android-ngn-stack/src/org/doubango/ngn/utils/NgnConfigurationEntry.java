@@ -120,10 +120,10 @@ public class NgnConfigurationEntry {
 		/*tdav_codec_id_t.tdav_codec_id_h264_bp.swigValue() |
 		tdav_codec_id_t.tdav_codec_id_vp8.swigValue() |
 		tdav_codec_id_t.tdav_codec_id_h263p.swigValue() |
-		tdav_codec_id_t.tdav_codec_id_h263.swigValue() |
-		tdav_codec_id_t.tdav_codec_id_g722.swigValue() |*/
-		tdav_codec_id_t.tdav_codec_id_pcmu.swigValue();
-	//tdav_codec_id_t.tdav_codec_id_pcma.swigValue() ;
+		tdav_codec_id_t.tdav_codec_id_h263.swigValue() |*/
+	//	tdav_codec_id_t.tdav_codec_id_g722.swigValue() |
+		tdav_codec_id_t.tdav_codec_id_pcmu.swigValue() ;
+	//	tdav_codec_id_t.tdav_codec_id_pcma.swigValue() ;
 	public static final int DEFAULT_MEDIA_AUDIO_RESAMPLER_QUALITY = 0;
 	public static final int DEFAULT_MEDIA_AUDIO_CONSUMER_GAIN = 0; // disabled
 	public static final int DEFAULT_MEDIA_AUDIO_PRODUCER_GAIN = 0; // disabled
